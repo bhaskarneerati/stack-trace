@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @bhaskarneerati
-- 🌐 Portfolio: [bhaskarneerati](https://bhaskarneerati.github.io/stack-trace/#top/)
+- 🌐 Portfolio: [bhaskarneerati](https://bhaskarneerati.github.io/stack-trace/#top)
 - 📫 To reach me: [LinkedIn](https://www.linkedin.com/in/bhaskar-neerati), [Mail](bhaskarneerati3.14@gmail.com)
 
 <!---

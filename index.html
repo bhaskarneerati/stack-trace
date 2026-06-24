@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhaskar Neerati - Software Engineer</title>
+<meta name="description" content="Bhaskar Neerati - Software Engineer specializing in Python, Node.js, and scalable backend systems.">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">Bhaskar Neerati</a>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="navDownloadBtn" type="button" class="nav-download" title="Generates a minimal, text-only PDF from this page's content">Download</button>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <div class="container">
+      <p class="eyebrow">Software Engineer</p>
+      <h1>Bhaskar Neerati</h1>
+      <p class="hero-sub">I build scalable backend systems and APIs - Python, Node.js, Docker, and cloud-native infrastructure.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <button id="downloadResumeBtn" class="btn btn-outline" type="button" title="Generates a minimal, text-only PDF from this page's content">Download Resume</button>
+      </div>
+      <p class="hero-note">Generates a minimal, text-only PDF on the fly - not my full formatted resume.</p>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">
+        Software Engineer with 3.8+ years of experience building scalable, production-grade backend systems
+        and APIs across banking and healthcare domains. Experienced in Node.js, Python, Docker, and CI/CD
+        pipelines, with a strong foundation in DevOps principles, live service monitoring, and incident
+        root-cause analysis. Delivered and maintained systems serving 30,000+ users daily, with hands-on
+        experience in production debugging, code reviews, and agile delivery. Currently expanding expertise
+        in TypeScript and Kubernetes for modern cloud-native microservice architectures.
+      </p>
+    </div>
+  </section>
+
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Senior Software Engineer</h3>
+            <span class="timeline-date">Oct 2024 - Present</span>
+          </div>
+          <p class="timeline-meta">Phoebus AI Solutions · Backend Engineer, Chatbot Systems &amp; API Integration · Healthcare · Remote</p>
+          <ul class="timeline-list">
+            <li>Designed and deployed a scalable chatbot backend on Yellow.ai for a healthcare client, serving 30,000+ users daily and reducing manual support queries by ~40%</li>
+            <li>Integrated 15+ REST APIs connecting healthcare backend services with conversational workflows, cutting average response latency by ~30%</li>
+            <li>Developed JavaScript and Node.js automation workflows for dynamic decision-handling, eliminating ~15 hrs/week of manual triage</li>
+            <li>Led incident root-cause analysis for critical production API failures, resolving issues within a 2-hour SLA and maintaining 99.5%+ uptime</li>
+          </ul>
+          <p class="timeline-stack">Node.js · JavaScript · Python · REST APIs · Yellow.ai · Production Debugging</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Associate Software Engineer</h3>
+            <span class="timeline-date">Sep 2022 - Oct 2024</span>
+          </div>
+          <p class="timeline-meta">Accenture · Python Backend Engineer · Banking · Hyderabad (Hybrid)</p>
+          <ul class="timeline-list">
+            <li>Built Python automation pipelines for a banking client's data processing workflows, reducing manual processing time by ~60% across 5 operational teams</li>
+            <li>Designed and implemented 10+ REST APIs using FastAPI for enterprise banking applications handling transaction records, loan data, and financial reporting at scale</li>
+            <li>Architected event-driven microservices using AWS Lambda, SQS, and SNS, processing 50,000+ async events/day with decoupled, fault-tolerant design</li>
+            <li>Deployed and maintained Dockerized backend services on AWS EC2, supporting zero-downtime deployments</li>
+            <li>Implemented AWS CloudWatch dashboards and alerting, reducing mean time to detect production issues by ~45%</li>
+            <li>Improved API throughput by ~35% through async queue-based refactoring using AWS SQS</li>
+          </ul>
+          <p class="timeline-stack">Python · FastAPI · Node.js · AWS Lambda · EC2 · SQS · SNS · CloudWatch · Docker · CI/CD (Jenkins)</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages &amp; Frameworks</h3>
+          <p>Node.js, TypeScript, Python, FastAPI, JavaScript</p>
+        </div>
+        <div class="skill-group">
+          <h3>DevOps &amp; Infrastructure</h3>
+          <p>Docker, CI/CD (Jenkins), Kubernetes (learning), Git, Linux, Nginx</p>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; Monitoring</h3>
+          <p>AWS Lambda, EC2, SQS, SNS, CloudWatch</p>
+        </div>
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <p>MySQL, PostgreSQL, SQL, ChromaDB</p>
+        </div>
+        <div class="skill-group">
+          <h3>Architecture</h3>
+          <p>REST APIs, Event-Driven Architecture, Microservices, Async Processing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Master of Science - Physics</h3>
+            <span class="timeline-date">2020 - 2022</span>
+          </div>
+          <p class="timeline-meta">University of Hyderabad · GPA: 8.54 / 10.0</p>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <h3>Bachelor of Science (Hons.) - Physics</h3>
+            <span class="timeline-date">2017 - 2020</span>
+          </div>
+          <p class="timeline-meta">Sri Sathya Sai Institute of Higher Learning · GPA: 7.7 / 10.0</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-text">I'm open to new opportunities and conversations. Reach out below.</p>
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:bhaskarneerati3.14@gmail.com">bhaskarneerati3.14@gmail.com</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/bhaskar-neerati" target="_blank" rel="noopener">linkedin.com/in/bhaskar-neerati</a></li>
+        <li><span>GitHub</span><a href="https://github.com/bhaskarneerati" target="_blank" rel="noopener">github.com/bhaskarneerati</a></li>
+        <li><span>Location</span><span>Hyderabad, India</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Bhaskar Neerati</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

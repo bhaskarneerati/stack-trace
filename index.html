@@ -3,49 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhaskar Neerati - Software Engineer</title>
-<meta name="description" content="Bhaskar Neerati - Software Engineer specializing in Python, Node.js, and scalable backend systems.">
+<title>Bhaskar Neerati | Backend Software Engineer</title>
+<meta name="description" content="Backend software engineer with 4+ years of experience in Python, FastAPI and PostgreSQL, building APIs and event-driven systems for banking and healthcare clients.">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bhaskar Neerati | Backend Software Engineer">
+<meta property="og:description" content="Python, FastAPI, PostgreSQL and AWS. APIs, event-driven pipelines and LLM-powered automation.">
+<meta property="og:url" content="https://bhaskarneerati.github.io/stack-trace/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b6f88'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EBN%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <script>
   (function () {
-    var saved = localStorage.getItem("theme");
-    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var theme = "light";
+    try {
+      var saved = localStorage.getItem("theme");
+      theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch (e) {}
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container header-inner">
     <a href="#top" class="logo">Bhaskar Neerati</a>
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Main">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-      <button id="navDownloadBtn" type="button" class="nav-download" title="Generates a minimal, text-only PDF from this page's content">Download</button>
+      <a href="Bhaskar_Neerati_Backend_Developer.pdf" class="nav-cv" download>CV</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<main>
+<main id="main">
 
   <section id="top" class="hero">
     <div class="container">
-      <p class="eyebrow">Software Engineer</p>
+      <p class="eyebrow">Backend Software Engineer</p>
       <h1>Bhaskar Neerati</h1>
-      <p class="hero-sub">I build scalable backend systems and APIs - Python, Node.js, Docker, and cloud-native infrastructure.</p>
+      <p class="hero-sub">I build backend services and APIs in Python and FastAPI, from event-driven pipelines on AWS to LLM-powered automation.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <button id="downloadResumeBtn" class="btn btn-outline" type="button" title="Generates a minimal, text-only PDF from this page's content">Download Resume</button>
+        <a href="Bhaskar_Neerati_Backend_Developer.pdf" class="btn btn-primary" download>Download CV</a>
+        <a href="#projects" class="btn btn-outline">View projects</a>
       </div>
-      <p class="hero-note">Generates a minimal, text-only PDF on the fly - not my full formatted resume.</p>
+      <p class="hero-links">
+        <a href="https://github.com/bhaskarneerati" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/bhaskar-neerati" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:bhaskarneerati3.14@gmail.com">Email</a>
+      </p>
     </div>
   </section>
 
@@ -53,12 +72,11 @@
     <div class="container">
       <h2 class="section-title">About</h2>
       <p class="about-text">
-        Software Engineer with 3.8+ years of experience building scalable, production-grade backend systems
-        and APIs across banking and healthcare domains. Experienced in Node.js, Python, Docker, and CI/CD
-        pipelines, with a strong foundation in DevOps principles, live service monitoring, and incident
-        root-cause analysis. Delivered and maintained systems serving 30,000+ users daily, with hands-on
-        experience in production debugging, code reviews, and agile delivery. Currently expanding expertise
-        in TypeScript and Kubernetes for modern cloud-native microservice architectures.
+        Software Engineer with 4+ years of experience building backend services and APIs in Python and FastAPI
+        for banking and healthcare clients. Experience integrating REST APIs and conversational AI (Yellow.ai),
+        building an event-driven invoice-processing platform with LLM agents (Lyzr) on AWS, and developing
+        full-stack applications with Next.js. Comfortable debugging issues from logs and working from
+        requirements to release in agile teams.
       </p>
     </div>
   </section>
@@ -73,14 +91,25 @@
             <h3>Senior Software Engineer</h3>
             <span class="timeline-date">Oct 2024 - Present</span>
           </div>
-          <p class="timeline-meta">Phoebus AI Solutions · Backend Engineer, Chatbot Systems &amp; API Integration · Healthcare · Remote</p>
+          <p class="timeline-meta">Phoebus AI Solutions · Remote</p>
+
+          <h4 class="timeline-sub">Healthcare Chatbot (Yellow.ai)</h4>
           <ul class="timeline-list">
-            <li>Designed and deployed a scalable chatbot backend on Yellow.ai for a healthcare client, serving 30,000+ users daily and reducing manual support queries by ~40%</li>
-            <li>Integrated 15+ REST APIs connecting healthcare backend services with conversational workflows, cutting average response latency by ~30%</li>
-            <li>Developed JavaScript and Node.js automation workflows for dynamic decision-handling, eliminating ~15 hrs/week of manual triage</li>
-            <li>Led incident root-cause analysis for critical production API failures, resolving issues within a 2-hour SLA and maintaining 99.5%+ uptime</li>
+            <li>Built conversational flows, REST API integrations and custom JavaScript logic for a healthcare client's chatbot on Yellow.ai; delivered over about a year, serving 30,000+ users daily per the bot analytics, with the client reporting about 40% fewer manual support queries.</li>
+            <li>Integrated 15+ REST APIs (appointments, insurance changes and more) into the conversation flows, with retry handling (up to 3 attempts) instead of failing on the first error, and logging of key request and response parameters to support debugging.</li>
+            <li>Reduced average API response latency by about 30% (before and after averages from platform logs) by replacing a token-API call on every request with a global token and expiry check (Yellow App to Yellow Cloud migration), caching shared reference data (appointment types, specialties, clinic and provider lists, plan types) across users, and reusing policy details within a conversation to remove duplicate calls.</li>
+            <li>Developed a Python script that automates RAG answer evaluation: it sends the client's test questions to the bot through Yellow.ai APIs and compares each answer with the expected one using similarity scoring, replacing about 2 days of manual checking per test round.</li>
           </ul>
-          <p class="timeline-stack">Node.js · JavaScript · Python · REST APIs · Yellow.ai · Production Debugging</p>
+          <p class="timeline-stack">Yellow.ai · JavaScript · Python · REST APIs</p>
+
+          <h4 class="timeline-sub">Invoice Processing Platform (client engagement for Lyzr)</h4>
+          <ul class="timeline-list">
+            <li>Designed and built an event-driven platform that receives vendor invoices from Outlook mailboxes through Microsoft Graph change-notification webhooks (a Lambda renews subscriptions every 12 hours) and from a bulk-upload portal, to automate invoice entry into the client's Yardi accounting system.</li>
+            <li>Implemented a queue-based pipeline (FastAPI API, SQS, separate worker) that extracts invoice fields with Lyzr AI agents, validates vendor, PO, property and duplicates against Yardi, and delivers import files over SFTP.</li>
+            <li>Built a Next.js portal with a per-invoice step tracker, a "Needs Review" queue for exceptions, analytics, Microsoft SSO and email failure alerts.</li>
+            <li>Deployed on AWS (ECS, RDS, S3, Amplify) with automated deployments from Bitbucket.</li>
+          </ul>
+          <p class="timeline-stack">Python · FastAPI · PostgreSQL · Next.js · AWS (ECS, Lambda, SQS, S3, RDS) · Microsoft Graph API · Lyzr AI agents · SFTP</p>
         </article>
 
         <article class="timeline-item">
@@ -88,16 +117,15 @@
             <h3>Associate Software Engineer</h3>
             <span class="timeline-date">Sep 2022 - Oct 2024</span>
           </div>
-          <p class="timeline-meta">Accenture · Python Backend Engineer · Banking · Hyderabad (Hybrid)</p>
+          <p class="timeline-meta">Accenture · Python Backend Developer, banking client (loan services) · Hyderabad (Hybrid)</p>
           <ul class="timeline-list">
-            <li>Built Python automation pipelines for a banking client's data processing workflows, reducing manual processing time by ~60% across 5 operational teams</li>
-            <li>Designed and implemented 10+ REST APIs using FastAPI for enterprise banking applications handling transaction records, loan data, and financial reporting at scale</li>
-            <li>Architected event-driven microservices using AWS Lambda, SQS, and SNS, processing 50,000+ async events/day with decoupled, fault-tolerant design</li>
-            <li>Deployed and maintained Dockerized backend services on AWS EC2, supporting zero-downtime deployments</li>
-            <li>Implemented AWS CloudWatch dashboards and alerting, reducing mean time to detect production issues by ~45%</li>
-            <li>Improved API throughput by ~35% through async queue-based refactoring using AWS SQS</li>
+            <li>Developed and maintained FastAPI REST endpoints for a banking client's loan services, covering CRUD operations on loan data, business logic written from requirements, Pydantic request validation and consistent error handling.</li>
+            <li>Worked with PostgreSQL through SQLAlchemy to read, insert and update application data; changed existing APIs to meet new requirements and integrated them with other backend services over REST.</li>
+            <li>Wrote unit and API tests for the features I delivered; diagnosed and fixed defects reported by QA and found in testing by reading application logs and debugging Python code.</li>
+            <li>Made small changes to existing Python AWS Lambda functions in the bank's event-driven transaction-processing flow (built on SQS and SNS), working with senior engineers.</li>
+            <li>Supported production investigations and releases (including triggering the team's Jenkins pipelines) and worked from Jira tickets in a team of senior developers, a tech lead and QA engineers: daily stand-ups, sprint planning, code reviews.</li>
           </ul>
-          <p class="timeline-stack">Python · FastAPI · Node.js · AWS Lambda · EC2 · SQS · SNS · CloudWatch · Docker · CI/CD (Jenkins)</p>
+          <p class="timeline-stack">Python · FastAPI · PostgreSQL · SQLAlchemy · Pydantic · Pytest · REST APIs · AWS Lambda · Docker · Jenkins · Git · Jira</p>
         </article>
 
       </div>
@@ -107,7 +135,31 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title">Projects</h2>
-      <div class="project-grid" id="projectGrid"></div>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Prism: API Gateway and Developer Platform</h3>
+          <p>A self-hosted API gateway where developers register proxy routes and receive API keys; only SHA-256 hashes of the keys are stored. An async FastAPI reverse proxy validates keys, enforces Redis sliding-window rate limits and monthly quotas, and records usage through background tasks. A Next.js dashboard shows usage analytics, request logs and an admin panel, and GitHub Actions runs the Pytest suite on every push to main.</p>
+          <div class="project-tags">
+            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Next.js</span><span>Docker</span><span>GitHub Actions</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bhaskarneerati/project-prism" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>RAG Assistant: Retrieval-Augmented Generation Chat Platform</h3>
+          <p>Lets users chat with private documents (PDF, Markdown, TXT), combining semantic vector search with LLM answers restricted to the retrieved context, with source citations. A modular ingestion pipeline feeds a persistent ChromaDB store, a provider-agnostic LangChain layer supports OpenAI, Gemini and Groq, an admin dashboard shows the retrieved chunks and answers per session, and an embeddable chat widget loads with a single script tag.</p>
+          <div class="project-tags">
+            <span>Python</span><span>FastAPI</span><span>LangChain</span><span>ChromaDB</span><span>sentence-transformers</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bhaskarneerati/rag-assistant" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -116,24 +168,28 @@
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3>Languages &amp; Frameworks</h3>
-          <p>Node.js, TypeScript, Python, FastAPI, JavaScript</p>
-        </div>
-        <div class="skill-group">
-          <h3>DevOps &amp; Infrastructure</h3>
-          <p>Docker, CI/CD (Jenkins), Kubernetes (learning), Git, Linux, Nginx</p>
-        </div>
-        <div class="skill-group">
-          <h3>Cloud &amp; Monitoring</h3>
-          <p>AWS Lambda, EC2, SQS, SNS, CloudWatch</p>
+          <h3>Backend</h3>
+          <p>Python, FastAPI, REST APIs, Pydantic, SQLAlchemy, Alembic, async programming (httpx, background tasks), Pytest</p>
         </div>
         <div class="skill-group">
           <h3>Databases</h3>
-          <p>MySQL, PostgreSQL, SQL, ChromaDB</p>
+          <p>PostgreSQL, SQL, Redis, ChromaDB</p>
         </div>
         <div class="skill-group">
-          <h3>Architecture</h3>
-          <p>REST APIs, Event-Driven Architecture, Microservices, Async Processing</p>
+          <h3>AI / LLM</h3>
+          <p>LangChain, Retrieval-Augmented Generation (RAG), embeddings, OpenAI / Gemini / Groq APIs, Lyzr agents, Yellow.ai, prompt engineering</p>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <p>Next.js, React, TypeScript, JavaScript, Tailwind CSS, shadcn/ui</p>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud and DevOps (working knowledge)</h3>
+          <p>AWS (Lambda, SQS, S3, ECS, RDS), Docker, GitHub Actions, Jenkins</p>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <p>Git, GitHub, Bitbucket, Jira, Claude Code (AI-assisted development)</p>
         </div>
       </div>
     </div>
@@ -145,14 +201,14 @@
       <div class="timeline">
         <article class="timeline-item">
           <div class="timeline-head">
-            <h3>Master of Science - Physics</h3>
+            <h3>Master of Science, Physics</h3>
             <span class="timeline-date">2020 - 2022</span>
           </div>
           <p class="timeline-meta">University of Hyderabad · GPA: 8.54 / 10.0</p>
         </article>
         <article class="timeline-item">
           <div class="timeline-head">
-            <h3>Bachelor of Science (Hons.) - Physics</h3>
+            <h3>Bachelor of Science (Hons.), Physics</h3>
             <span class="timeline-date">2017 - 2020</span>
           </div>
           <p class="timeline-meta">Sri Sathya Sai Institute of Higher Learning · GPA: 7.7 / 10.0</p>
@@ -164,7 +220,7 @@
   <section id="contact" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <p class="contact-text">Please feel free to reach out below.</p>
+      <p class="contact-text">Open to a conversation about backend roles. The quickest way to reach me is email.</p>
       <ul class="contact-list">
         <li><span>Email</span><a href="mailto:bhaskarneerati3.14@gmail.com">bhaskarneerati3.14@gmail.com</a></li>
         <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/bhaskar-neerati" target="_blank" rel="noopener">linkedin.com/in/bhaskar-neerati</a></li>
@@ -182,7 +238,6 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
